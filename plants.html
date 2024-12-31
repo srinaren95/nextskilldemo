@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Sample Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Some content height to enable scrolling */
+    .content {
+        height: 1500px;
+        padding: 20px;
+    }
+
+    /* Optional: Adding shadow effect when sticky */
+    .sticky-header {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sticky-header.sticky {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .stick-top{
+      background: #fff6f4;
+      background-color: rgb(255,246,244);
+    }
+     
+.search-bar {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 2px;
+  background-color: #f9f9f9;
+}
+
+.search-bar .form-control {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.search-bar .btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+} 
+
+</style>
+ 
+  
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.avif" alt="AgriCulture">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="plants.html" class="active">Plants</a></li>
+                <li><a href="plants.html">Seeds</a></li> 
+                <li><a href="plants.html">Pots & Planters</a></li> 
+                <li><a href="plants.html">Plant Care</a></li> 
+                <li><a href="plants.html">Gifting</a></li>   
+                <!-- <li class="dropdown">
+                    <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="#">Dropdown 1</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Dropdown 1</a></li>
+                                <li><a href="#">Deep Dropdown 2</a></li>
+                                <li><a href="#">Deep Dropdown 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dropdown 2</a></li>
+                        <li><a href="#">Dropdown 3</a></li>
+                    </ul>
+                </li>  -->
+                <li>
+
+                  <form class="d-flex search-bar">
+                    <input class="form-control me-2" type="search" placeholder="Search for plants, seeds and planters ..." aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">
+                      <i class="bi bi-search"></i> <!-- Bootstrap Icon -->
+                    </button>
+                  </form>
+                </li>
+                
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+    </div>
+</header>
+
+  <main class="main">
+ 
+
+    <section>
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <h1 class="display-5">Plants</h1>
+            <p class="lead">
+              Plants make for the best house companions, suitable for all your moods and every aesthetic. 
+              <a href="#" class="text-success fw-bold">Ugaoo</a>, an online website for decorative plants, 
+              offers a wide variety of plants so that you can buy plants online from the comfort of your home!
+            </p>
+          </div>  
+        </div>
+
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <button class="btn btn-success me-2 d-flex align-items-center">
+              <i class="bi bi-filter me-2"></i> FILTER
+            </button>
+          </div>
+          <div class="col d-flex justify-content-end">
+              <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" id="sortByDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  SORT BY
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+                  <li><h6 class="dropdown-header">Featured</h6></li>
+                  <li><a class="dropdown-item" href="#">Best selling</a></li>
+                  <li><a class="dropdown-item" href="#">Alphabetically, A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Alphabetically, Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Price, low to high</a></li>
+                  <li><a class="dropdown-item" href="#">Price, high to low</a></li>
+                  <li><a class="dropdown-item" href="#">Date, old to new</a></li>
+                  <li><a class="dropdown-item" href="#">Date, new to old</a></li>
+                </ul>
+              </div> 
+          </div>
+        </div>
+
+
+        <div class="container mt-4">
+          <div class="row">
+             <!-- Card 1 -->
+            <div class="col-md-3 mt-2">
+                <div class="card text-center">
+                  <div class="position-relative">
+                    <img src="assets/img/plant1.jpg" class="card-img-top" alt="Brazilian Wood Plant">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Brazilian Wood Plant</h5>
+                    <div class="row">
+                      <div class="col d-flex justify-content-start">
+                        <p class="text-muted text-decoration-line-through">₹1,999</p>
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <p class="text-success fw-bold">From ₹499</p>
+                      </div>
+                    </div>
+                    <div class="text-warning">
+                      ★★★★★
+                    </div>
+                    <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                  </div>
+                </div>
+              </div> 
+  
+              
+              <!-- Card 2 -->
+              <div class="col-md-3 mt-2">
+                <div class="card text-center">
+                  <div class="position-relative">
+                    <img src="assets/img/plant2.jpg" class="card-img-top" alt="Brazilian Wood Plant">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Peace Lily Plant</h5>
+                    <div class="row">
+                      <div class="col d-flex justify-content-start">
+                        <p class="text-muted text-decoration-line-through">₹399</p>
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <p class="text-success fw-bold">From ₹299</p>
+                      </div>
+                    </div>
+                    <div class="text-warning">
+                      ★★★★★
+                    </div>
+                    <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                  </div>
+                </div>
+              </div> 
+  
+  
+              
+              <!-- Card 3 -->
+              <div class="col-md-3 mt-2">
+                <div class="card text-center">
+                  <div class="position-relative">
+                    <img src="assets/img/plant3.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Areca Palm Plant</h5>
+                    <div class="row">
+                      <div class="col d-flex justify-content-start">
+                        <p class="text-muted text-decoration-line-through">₹2,999</p>
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <p class="text-success fw-bold">From ₹799</p>
+                      </div>
+                    </div>
+                    <div class="text-warning">
+                      ★★★★★
+                    </div>
+                    <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                  </div>
+                </div>
+              </div> 
+  
+  
+              
+              <!-- Card 4 -->
+              <div class="col-md-3 mt-2">
+                <div class="card text-center">
+                  <div class="position-relative">
+                    <img src="assets/img/plant4.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                    <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Jade Plant Mini</h5>
+                    <div class="row">
+                      <div class="col d-flex justify-content-start">
+                        <p class="text-muted text-decoration-line-through">₹999</p>
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <p class="text-success fw-bold">From ₹249</p>
+                      </div>
+                    </div>
+                    <div class="text-warning">
+                      ★★★★★
+                    </div>
+                    <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                  </div>
+                </div>
+              </div> 
+
+          
+          </div>
+
+
+          
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3 mt-2">
+              <div class="card text-center">
+                <div class="position-relative">
+                  <img src="assets/img/plant5.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Bamboo Palm Plant</h5>
+                  <div class="row">
+                    <div class="col d-flex justify-content-start">
+                      <p class="text-muted text-decoration-line-through">₹499</p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                      <p class="text-success fw-bold">From ₹399</p>
+                    </div>
+                  </div>
+                  <div class="text-warning">
+                    ★★★★★
+                  </div>
+                  <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                </div>
+              </div>
+            </div> 
+
+            
+            <!-- Card 2 -->
+            <div class="col-md-3 mt-2">
+              <div class="card text-center">
+                <div class="position-relative">
+                  <img src="assets/img/plant6.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Areca Palm Plant</h5>
+                  <div class="row">
+                    <div class="col d-flex justify-content-start">
+                      <p class="text-muted text-decoration-line-through">₹1,199</p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                      <p class="text-success fw-bold">From ₹999</p>
+                    </div>
+                  </div>
+                  <div class="text-warning">
+                    ★★★★★
+                  </div>
+                  <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                </div>
+              </div>
+            </div> 
+
+
+            
+            <!-- Card 3 -->
+            <div class="col-md-3 mt-2">
+              <div class="card text-center">
+                <div class="position-relative">
+                  <img src="assets/img/plant7.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lucky Bamboo Plant - 3 Layer</h5>
+                  <div class="row">
+                    <div class="col d-flex justify-content-start">
+                      <p class="text-muted text-decoration-line-through">₹499</p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                      <p class="text-success fw-bold">From ₹399</p>
+                    </div>
+                  </div>
+                  <div class="text-warning">
+                    ★★★★★
+                  </div>
+                  <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                </div>
+              </div>
+            </div> 
+
+
+            
+            <!-- Card 4 -->
+            <div class="col-md-3 mt-2">
+              <div class="card text-center">
+                <div class="position-relative">
+                  <img src="assets/img/plant8.webp" class="card-img-top" alt="Brazilian Wood Plant">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">SALE</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Monstera Deliciosa Plant - XL</h5>
+                  <div class="row">
+                    <div class="col d-flex justify-content-start">
+                      <p class="text-muted text-decoration-line-through">₹3,499</p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                      <p class="text-success fw-bold">From ₹2,499</p>
+                    </div>
+                  </div>
+                  <div class="text-warning">
+                    ★★★★★
+                  </div>
+                  <a href="checklist.html" class="btn btn-success mt-2">VIEW PRODUCT</a>
+                </div>
+              </div>
+            </div> 
+
+
+          
+          </div>
+        </div>
+
+        
+
+        
+   
+   
+        <div class="container-fluid mt-5 py-5" style="background-color: #f9faf5; font-family: 'Arial', sans-serif; font-size: 16px;">
+            <div class="container">
+              <!-- Section 1 -->
+              <h5 class="fw-bold" style="font-size: small;">● Plants at Home: Bring Home Nature’s Gateway</h5>
+              <p style="font-size: smaller;">
+                Bringing plants home has been a practice for ages now. But have you ever wondered how that really works and why people keep doing so? 
+                There’s something magical about having live plants in your space. Not only do they bring a slice of nature indoors or to your outdoor gardens, 
+                but they also bring with them a variety of benefits. They promote an unparalleled sense of tranquility and with Ugaoo’s easy-to-use online platform, 
+                you can buy live plants online and experience the joy of nature’s gateways at your fingertips.
+              </p>
+          
+              <!-- Section 2 -->
+              <h5 class="fw-bold" style="font-size: small;">● Benefits of Keeping Live Plants Indoors</h5>
+              <ol style="font-size: smaller;">
+                <li>
+                  Live plants enhance the visual appeal of any indoor space and bring nature indoors with them. 
+                  With the vibrant colors of flowering plants and the distinguished foliage of other indoor plants, 
+                  you can effortlessly elevate the decor and vibe of your living or office space. Green plants also create a calming and refreshing atmosphere, promoting relaxation and tranquility.
+                </li>
+                <li>
+                  Live plants act as natural air purifiers. They help remove harmful toxins such as formaldehyde, benzene, and carbon monoxide from the air. 
+                  This means that, in turn, they release oxygen through photosynthesis, improving indoor air quality and making your home healthier to breathe in.
+                </li>
+                <li>
+                  Whether you buy plants from the store or order plants online, caring for plants is a very rewarding hobby. 
+                  The simple process of tending to plants can be therapeutic, which reduces stress and promotes a sense of accomplishment. 
+                  It offers an opportunity to connect with nature and nurture living organisms, fostering a deeper appreciation for the environment.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <hr>
+          <div class="container py-5">
+            <h5 class="fw-bold">FAQs</h5>
+            <div class="accordion" id="faqAccordion">
+              <!-- Question 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Why are my houseplants getting brown tips on their leaves?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Brown tips can be caused by underwatering, over-fertilization, or low humidity. Check your plant's care routine and adjust as needed.
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Question 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How do I use the self-watering pot?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Fill the reservoir with water, and the pot will provide consistent hydration to the plant through capillary action.
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Question 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Why is my plant not growing? / How do I boost my plant’s growth?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Ensure your plant gets adequate light, water, and nutrients. Check for pests or diseases that might hinder growth.
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Question 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Why is my plant not flowering?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Plants may not flower due to insufficient light, incorrect pruning, or nutrient imbalance. Check and adjust care accordingly.
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Question 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How do I take care of succulents?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Succulents require bright, indirect light, well-draining soil, and minimal watering. Allow the soil to dry out completely between waterings.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+    </section>
+ 
+
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">TestSite</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Test Street</p>
+              <p>test</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+0000000</span></p>
+              <p><strong>Email:</strong> <span>test@example.com</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+          </div>
+          
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    window.onscroll = function () {
+        const header = document.getElementById('header');
+        if (window.scrollY > 0) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    };
+</script>
+
+</body>
+
+</html>
